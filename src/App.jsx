@@ -1,178 +1,149 @@
-import { Mail, Phone } from "lucide-react";
+import "./index.css";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white scroll-smooth">
+    <div className="bg-gradient-to-br from-black via-gray-900 to-black text-white">
 
-      {/* NAVBAR */}
-      <div className="fixed top-0 w-full backdrop-blur bg-slate-950/70 border-b border-slate-800 z-50">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-center">
-          <div className="flex gap-10 text-slate-300">
+      {/* HERO */}
+      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          Richard Joshi
+        </h1>
 
-            {["experience", "skills", "education", "contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item}`}
-                className="relative group capitalize"
-              >
-                {item}
-                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-sky-400 transition-all group-hover:w-full"></span>
-              </a>
-            ))}
+        <p className="text-lg md:text-xl text-gray-400 mb-4">
+          Software Developer | Logistics | Operations
+        </p>
 
-          </div>
+        <p className="text-gray-500 max-w-xl mb-6">
+          Professional with experience in software development, supply chain logistics,
+          and technical support across Canada and India.
+        </p>
+
+        <div className="flex gap-4">
+          <a href="#projects" className="bg-white text-black px-6 py-2 rounded-xl hover:scale-105 transition">
+            View Projects
+          </a>
+          <a href="/Richard_Resume.pdf" download className="border px-6 py-2 rounded-xl hover:scale-105 transition">
+            Download Resume
+          </a>
         </div>
-      </div>
+      </section>
 
-      {/* CONTENT */}
-      <div className="max-w-6xl mx-auto px-6 pt-28 pb-16 space-y-20">
+      {/* ABOUT */}
+      <section className="max-w-5xl mx-auto px-6 py-28">
+        <h2 className="text-3xl font-bold mb-6">About Me</h2>
+        <p className="text-gray-400 leading-7">
+          Motivated professional with experience in software development, logistics operations,
+          and technical support. Background includes hands-on work in warehouse operations,
+          supply chain processes, and enterprise software support.
+        </p>
+      </section>
 
-        {/* HERO */}
-        <section className="grid md:grid-cols-2 gap-10 items-center">
+      {/* EXPERIENCE */}
+      <section className="max-w-5xl mx-auto px-6 py-28">
+        <h2 className="text-3xl font-bold mb-10">Experience</h2>
 
-          <div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              Richard Joshi
-            </h1>
+        <div className="space-y-6">
 
-            <p className="text-sky-400 mb-4">
-              Data Analytics • Supply Chain • Operations
+          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
+            <h3 className="text-xl font-semibold">Logistics Specialist — Azuma Foods</h3>
+            <p className="text-gray-400">Apr 2026 – Present | Mississauga, ON</p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
+            <h3 className="text-xl font-semibold">FedEx — Cargo & Package Handler</h3>
+            <p className="text-gray-400">Jun 2024 – Apr 2025 | Barrie, ON</p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
+            <h3 className="text-xl font-semibold">Specialty Cook — Canadian Brewhouse</h3>
+            <p className="text-gray-400">May 2023 – May 2025</p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
+            <h3 className="text-xl font-semibold">Tech Support Advisor — Best Buy</h3>
+            <p className="text-gray-400">2023 – 2024</p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
+            <h3 className="text-xl font-semibold">Technical Support Analyst — Anthology</h3>
+            <p className="text-gray-400">Dec 2022 – Apr 2023</p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
+            <h3 className="text-xl font-semibold">Associate Software Engineer — TechSera</h3>
+            <p className="text-gray-400">Sep 2021 – Aug 2022</p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="max-w-6xl mx-auto px-6 py-28">
+        <h2 className="text-3xl font-bold mb-10">Projects</h2>
+
+        <div className="grid md:grid-cols-2 gap-8">
+
+          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:scale-105 transition duration-300">
+            <h3 className="text-xl font-semibold mb-2">
+              Supply Chain Management Platform
+            </h3>
+            <p className="text-gray-400 mb-4">
+              Inventory and shipment tracking platform focused on logistics workflows and process management.
             </p>
-
-            <p className="text-slate-400 mb-6">
-              I combine analytics, logistics, and systems thinking to optimize
-              operations and drive business decisions.
-            </p>
-
-            <div className="flex gap-4">
-              <a
-                href="/Richard_Resume.pdf"
-                download
-                className="bg-sky-400 text-black px-5 py-2 rounded-lg hover:scale-105 transition"
-              >
-                Resume
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/richard-joshi-638969177"
-                target="_blank"
-                rel="noreferrer"
-                className="border px-5 py-2 rounded-lg hover:bg-slate-800 transition"
-              >
-                LinkedIn
-              </a>
-            </div>
-          </div>
-
-          {/* IMAGE */}
-          <div className="flex justify-center">
-            <div className="relative">
-              <div className="absolute inset-0 bg-sky-400 blur-2xl opacity-20 rounded-xl"></div>
-
-              <img
-                src="/richard.JPG"
-                alt="profile"
-                className="w-64 rounded-xl relative z-10 shadow-xl"
-              />
-            </div>
-          </div>
-
-        </section>
-
-        {/* EXPERIENCE */}
-        <section id="experience" className="scroll-mt-24">
-          <h2 className="text-3xl font-bold mb-6">Experience</h2>
-
-          <div className="space-y-4">
-            {[
-              "Logistics Specialist – Azuma Foods",
-              "Specialty Cook – Canadian Brewhouse",
-              "FedEx – Cargo & Package Handler",
-              "Tech Support Advisor – Best Buy",
-              "Technical Support Analyst – Anthology",
-              "Associate Software Engineer – TechSera"
-            ].map((job, i) => (
-              <div
-                key={i}
-                className="bg-slate-900 p-5 rounded-xl hover:translate-x-2 transition"
-              >
-                {job}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* SKILLS */}
-        <section id="skills" className="scroll-mt-24">
-          <h2 className="text-3xl font-bold mb-6">Skills</h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              "SQL",
-              "Python",
-              "Power BI",
-              "Tableau",
-              "Excel",
-              "ERP",
-              "Logistics",
-              "Analytics"
-            ].map((skill, i) => (
-              <div
-                key={i}
-                className="bg-slate-900 p-4 rounded-xl text-center hover:bg-sky-400 hover:text-black transition"
-              >
-                {skill}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* EDUCATION */}
-        <section id="education" className="scroll-mt-24">
-          <h2 className="text-3xl font-bold mb-6">Education</h2>
-
-          <div className="space-y-3">
-            <div className="bg-slate-900 p-5 rounded-xl">
-              Georgian College – Project Management (2024)
-            </div>
-
-            <div className="bg-slate-900 p-5 rounded-xl">
-              Georgian College – Big Data Analytics (2023)
-            </div>
-
-            <div className="bg-slate-900 p-5 rounded-xl">
-              Christ University – BTech Computer Engineering (2021)
-            </div>
-          </div>
-        </section>
-
-        {/* CONTACT */}
-        <section id="contact" className="scroll-mt-24">
-          <h2 className="text-3xl font-bold mb-6">Contact</h2>
-
-          <div className="bg-slate-900 p-6 rounded-xl space-y-3">
-
-            <div className="flex gap-2 items-center">
-              <Mail /> richardjoshi21@gmail.com
-            </div>
-
-            <div className="flex gap-2 items-center">
-              <Phone /> +1 4379842476
-            </div>
-
             <a
-              href="https://www.linkedin.com/in/richard-joshi-638969177"
+              href="https://github.com/Richie123231"
               target="_blank"
-              rel="noreferrer"
-              className="text-sky-400"
+              className="text-blue-400 hover:underline"
             >
-              LinkedIn Profile
+              View Code →
             </a>
-
           </div>
-        </section>
 
-      </div>
+          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:scale-105 transition duration-300">
+            <h3 className="text-xl font-semibold mb-2">
+              Trading Dashboard
+            </h3>
+            <p className="text-gray-400 mb-4">
+              Dashboard for tracking portfolio performance and financial data.
+            </p>
+            <a
+              href="https://github.com/Richie123231"
+              target="_blank"
+              className="text-blue-400 hover:underline"
+            >
+              View Code →
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* EDUCATION */}
+      <section className="max-w-5xl mx-auto px-6 py-28">
+        <h2 className="text-3xl font-bold mb-6">Education</h2>
+
+        <p className="text-gray-400">
+          Georgian College — Project Management (2024)
+        </p>
+        <p className="text-gray-400">
+          Georgian College — Big Data Analytics (2023)
+        </p>
+        <p className="text-gray-400">
+          Christ University — BTech Computer Engineering (2021)
+        </p>
+      </section>
+
+      {/* CONTACT */}
+      <section className="max-w-5xl mx-auto px-6 py-28">
+        <h2 className="text-3xl font-bold mb-6">Contact</h2>
+
+        <p className="text-gray-400">Email: richardjoshi21@gmail.com</p>
+        <p className="text-gray-400">
+          LinkedIn: linkedin.com/in/richard-joshi-638969177
+        </p>
+      </section>
+
     </div>
   );
 }
